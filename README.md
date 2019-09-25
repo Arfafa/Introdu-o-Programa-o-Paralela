@@ -1,8 +1,8 @@
-#Projetos
+# Projetos
 Projetos desenvolvidos ao longo da disciplina Introdução à Programação Paralela 
 oferecida pelo programa de Pós-Graduação do Instituto de Física de São Carlos.
 
-##Como funciona?
+## Como funciona?
 
 As especificações de cada projeto se encontram nos arquivos .pdf presentes em cada um 
 dos diretórios. Dentro deles existe também um arquivo em .c (ou .cpp) com o programa 
@@ -27,6 +27,6 @@ descompactá-los:
 tar -xzf arquivo.tar.gz
 ```
 
-##Projeto 01
+## Projeto 01
 
 Em breve...
