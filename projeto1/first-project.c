@@ -48,9 +48,7 @@ int main(int argc, char **argv)
         dupla[count%2] = n;
 
         if(count%2)
-        {
           insert(network, dupla);
-        }
 
         count++;
 
@@ -72,13 +70,6 @@ void insert(GRAPH *network, int *dupla)
 {
   NODE *aux, *corr;
 
-  if(dupla[1] < dupla[0])
-  {
-    dupla[0] = dupla[0]^dupla[1];
-    dupla[1] = dupla[0]^dupla[1];
-    dupla[0] = dupla[0]^dupla[1];
-  }
-
   for(int i = 0; i<2; i++)
   {
 	  NODE *new = (NODE*) malloc(sizeof(NODE));
@@ -88,6 +79,7 @@ void insert(GRAPH *network, int *dupla)
     new->next = NULL;
 
     aux = network->inicio;
+    corr = network->inicio;
     
     if(network->inicio == NULL)
     {
@@ -121,6 +113,13 @@ void insert(GRAPH *network, int *dupla)
         corr->next = new;
         network->tamanho++;
       }
+
+      else if(aux != NULL && aux->vertex == network->inicio->vertex)
+      {
+        new->next = network->inicio;
+        network->inicio = new;
+        network->tamanho++;
+      }
     }
   }
 }
@@ -137,6 +136,8 @@ void write(GRAPH *network)
 
 		aux = aux->next;
 	}
+
+  printf("Tamanho da rede: %d\n", network->tamanho);
 }
 
 void liberar(GRAPH *network)
