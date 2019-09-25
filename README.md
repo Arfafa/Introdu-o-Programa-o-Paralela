@@ -17,8 +17,14 @@ Caso o programa esteja com a extensão .cpp:
 g++ progama.cpp -o executavel
 ```
 
+As flags -Wall -Wextra e -Wpedantic podem ser adicionadas nos comandos citados anteriormente 
+com o intuito de verificar a emissão de warnings no nível mais alto.
+
+Para que a formatação dos arquivos fosse sempre consistente utilizei o programa 
+clang-format-8 com o estilo llvm.
+
 Até o presente momento, utilizo apenas C para fazer os programas. Os mesmos que estejam 
-com extensão .cpp provavelmente não usam nada (ou quase nada) que seja específico do C++
+com extensão .cpp provavelmente não usam nada (ou quase nada) que seja específico do C++.
 
 Os arquivos .tar.gz presentes em cada diretório são os arquivos de teste utilizados. Para 
 descompactá-los:
