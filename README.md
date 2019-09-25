@@ -12,12 +12,12 @@ desenvolvido para o projeto. Para gerar um executável basta executar o comando:
 gcc progama.c -o executavel
 ```
 
-Caso o programa esteja com a extensão .cpp basta apenas:
+Caso o programa esteja com a extensão .cpp:
 ```bash
 g++ progama.cpp -o executavel
 ```
 
-Até o presente momento, utilizo apenas C para fazer os programas. Os programas que estejam 
+Até o presente momento, utilizo apenas C para fazer os programas. Os mesmos que estejam 
 com extensão .cpp provavelmente não usam nada (ou quase nada) que seja específico do C++
 
 Os arquivos .tar.gz presentes em cada diretório são os arquivos de teste utilizados. Para 
