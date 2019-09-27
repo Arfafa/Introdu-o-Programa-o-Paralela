@@ -131,5 +131,5 @@ no pior caso. Porém, o mesmo possui algumas vantagens que merecem ser destacada
 
 Como o programa em questão lê um par de nós e já os adiciona em sua lista de adjacência, temos que a lista já 
 está ordenada quando buscamos adicionar outro par. Ou seja, estamos trabalhando com insertion sort em seu melhor caso 
-o qual, por sua vez, possui uma complexidade $O(n)$ o que torna o algoritmo mais interessante em termos de 
+o qual, por sua vez, possui uma complexidade $\[O(n)\]$ o que torna o algoritmo mais interessante em termos de 
 otimização.
