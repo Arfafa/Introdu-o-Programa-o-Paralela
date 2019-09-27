@@ -78,3 +78,58 @@ composta, em sua maioria, por zeros.
 
 Como resolver este problema então? Bem, existe uma outra forma de retrar redes conhecida como [Lista de Adjacência](https://en.wikipedia.org/wiki/Adjacency_list) 
 e esta estrutura é mais apropriada para representar redes esparsas, contornando o problema apontado anteriormente.
+
+Para tanto, foram criadas as structs:
+
+```c
+typedef struct node {
+  int vertex;
+  int total_neighbors;
+  int *neighbors;
+  struct node *next;
+
+} NODE;
+
+typedef struct adjacency_list {
+  NODE *start;
+  NODE *end;
+  int size;
+
+} ADJACENCY_LIST;
+```
+
+A Struct NODE possui o nó (vertex), o número total de vizinhos que este possui (total\_neighbors), seus vizinhos (neighbors) 
+e aponta para o pŕoximo nó da lista.
+
+Já a struct ADJACENCY\_LIST aponta para o começo (start) e fim (end) da lista e ainda guarda a informação sobre seu 
+tamanho (size).
+
+Por sua vez as funções:
+
+```c
+void insert(ADJACENCY_LIST *adlist, int *pair);
+void add_neighbor(NODE *vx, int neigh);
+void write(ADJACENCY_LIST *adlist, char *file_name);
+void liberate(ADJACENCY_LIST *adlist);
+```
+- insert: insere um novo par de nós dentro da lista de adjacência.
+- add\_neighbor: adiciona um novo vizinho para um nó já presente na lista.
+- write: gera o arquivo de saída.
+- liberate: desaloca o espaço ocupado pelas structs NODE e ADJACENCY\_LIST.
+
+Não entrarei em detalhes sobre cada for, while ou if utilizado pois neste espaço quero apenas ressaltar algumas 
+decisões de implementação utilizadas. Caso queira entender como foi implementada cada função, sugiro dar uma lida 
+no programa first\_project.c.
+
+Dentre as decisões tomadas, gostaria de falar sobre o uso do [insertion sort](https://en.wikipedia.org/wiki/Insertion_sort) 
+no programa. Este algoritmo tem como o problema principal possuir uma [complexidade $O(n^2)$](https://en.wikipedia.org/wiki/Big_O_notation) 
+no pior caso. Porém, o mesmo possui algumas vantagens que merecem ser destacadas:
+
+- É o método a ser utilizado quando o arquivo está "quase" ordenado
+- É um bom método quando se desejar adicionar poucos elementos em um arquivo já ordenado, pois seu custo é linear.
+- O algoritmo de ordenação por inserção é estável.
+
+Como o programa em questão lê um par de nós e já os adiciona em sua lista de adjacência, temos que a lista já 
+está ordenada quando buscamos adicionar outro par. Ou seja, estamos trabalhando com insertion sort em seu melhor caso 
+o qual, por sua vez, possui uma complexidade $O(n)$ o que torna o algoritmo mais interessante em termos de 
+otimização.
