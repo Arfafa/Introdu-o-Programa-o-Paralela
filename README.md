@@ -122,7 +122,7 @@ decisões de implementação utilizadas. Caso queira entender como foi implement
 no programa first\_project.c.
 
 Dentre as decisões tomadas, gostaria de falar sobre o uso do [insertion sort](https://en.wikipedia.org/wiki/Insertion_sort) 
-no programa. Este algoritmo tem como o problema principal possuir uma [complexidade \(O(n^2)\)](https://en.wikipedia.org/wiki/Big_O_notation) 
+no programa. Este algoritmo tem como o problema principal possuir uma [complexidade ![equation](https://latex.codecogs.com/gif.latex?O(n^2))](https://en.wikipedia.org/wiki/Big_O_notation) 
 no pior caso. Porém, o mesmo possui algumas vantagens que merecem ser destacadas:
 
 - É o método a ser utilizado quando o arquivo está "quase" ordenado
@@ -131,5 +131,5 @@ no pior caso. Porém, o mesmo possui algumas vantagens que merecem ser destacada
 
 Como o programa em questão lê um par de nós e já os adiciona em sua lista de adjacência, temos que a lista já 
 está ordenada quando buscamos adicionar outro par. Ou seja, estamos trabalhando com insertion sort em seu melhor caso 
-o qual, por sua vez, possui uma complexidade \(O(n)\) o que torna o algoritmo mais interessante em termos de 
+o qual, por sua vez, possui uma complexidade ![equation](https://latex.codecogs.com/gif.latex?O(n)) o que torna o algoritmo mais interessante em termos de 
 otimização.
