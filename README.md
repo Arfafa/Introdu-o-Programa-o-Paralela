@@ -73,7 +73,7 @@ Como já explicado, o programa deveria ler um arquivo que descreve um grafo. Uma
 para retratar uma estrutura desse tipo são as [Matrizes de Adjancência](https://en.wikipedia.org/wiki/Adjacency_matrix), 
 porém as redes com as quais estamos lidando aqui são [redes esparsas](https://en.wikipedia.org/wiki/Sparse_network) 
 e sim esta informação foi omitida pelo pdf do projeto. O grande problema em representar redes esparsas com 
-sua matriz de adjacência correspondente consistem no fato que acabamos em gastar muita memória alocando uma matriz 
+sua matriz de adjacência correspondente consiste no fato que acabamos em gastar muita memória alocando uma matriz 
 composta, em sua maioria, por zeros.
 
 Como resolver este problema então? Bem, existe uma outra forma de retrar redes conhecida como [Lista de Adjacência](https://en.wikipedia.org/wiki/Adjacency_list) 
