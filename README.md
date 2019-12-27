@@ -9,12 +9,12 @@ dos diretórios. Dentro deles existe também um arquivo em .c (ou .cpp) com o pr
 desenvolvido para o projeto. Para gerar um executável basta o comando:
 
 ```bash
-gcc -Wall -Wextra -Wpedantic progama.c -o executavel
+$ gcc -Wall -Wextra -Wpedantic progama.c -o executavel
 ```
 
 Caso o programa esteja com a extensão .cpp:
 ```bash
-g++ -Wall -Wextra -Wpedantic progama.cpp -o executavel
+$ g++ -Wall -Wextra -Wpedantic progama.cpp -o executavel
 ```
 
 As flags -Wall -Wextra e -Wpedantic podem ser adicionadas nos comandos citados anteriormente 
@@ -30,7 +30,7 @@ Os arquivos .tar.gz presentes em cada diretório são os arquivos de teste utili
 descompactá-los:
 
 ```bash
-tar -xzf arquivo.tar.gz
+$ tar -xzf arquivo.tar.gz
 ```
 
 ## Projeto 01
